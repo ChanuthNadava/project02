@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\employeeController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,4 +25,8 @@ Route::resource('product', ProductController::class);
 
 
 Route::get('/about', [ProductController::class, 'about'])->name('product.about');
-;
+
+Route::get('/employee/create', [employeeController::class, 'create']);
+Route::post('/employee/store', [employeeController::class, 'store'])->name('employee.store');
+
+
