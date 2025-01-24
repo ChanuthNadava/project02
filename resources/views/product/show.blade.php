@@ -8,9 +8,9 @@
 <div class="col-4"></div>
 <div class="col-4">
 <div class="card" style="width: 20rem;">
-  <img src="{{asset('uploads/'.$product->poster)}}" class="card-img-top">
+  <img src="{{asset('upload/'.$product->poster)}}" class="card-img-top">
   <div class="card-body">
-    <h5 class="card-title">{{$product->itemname}}</h5>
+    <h3 class="card-title">{{$product->itemname}}</h5>
     <p class="card-text">{{$product->gram}} | {{$product->price}}</p>
     
   </div>

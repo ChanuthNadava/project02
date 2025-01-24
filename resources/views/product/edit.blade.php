@@ -37,8 +37,11 @@
                   <option value="">Select Gram</option>
                    @if($gram)
                   @foreach($gram as $gram)
-
-                  <option value="{{$gram}}">{{$gram}}</option>
+                  @if($gram == $product->gram)
+                  <option value="{{$gram}}" selected >{{$gram}}</option>
+                  @else
+                     <option value="{{$gram}}">{{$gram}}</option>
+                     @endif
                   @endforeach
                    @endif
 

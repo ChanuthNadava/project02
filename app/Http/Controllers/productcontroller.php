@@ -73,7 +73,26 @@ class productcontroller extends Controller
      */
     public function update(Request $request, product $product)
     {
-        //
+        $request->validate([
+            'itemname'=>'required',
+            'gram'=>'required',
+           
+
+        ]);
+
+        $imageName ='';
+        if($request->poster){
+            $imageName = time().'.'.$request->poster->extension();
+            $request->poster->move(public_path('upload'),$imageName);
+            $product->poster=$imageName;
+        }
+
+        $product->itemname = $request->itemname;
+        $product->gram = $request->gram;
+        $product->price = $request->price;
+        $product->update();
+        return redirect()->route('product.index')->with('success','product update successfully');
+
     }
 
     /**

@@ -11294,3 +11294,6 @@ body.sidebar-toggled footer.sticky-footer {
 .img-thumbnail{
   width: 80px;
 }
+.card-img-top{
+  width: 100px;
+  }
