@@ -21,8 +21,12 @@
   margin:0 auto;
 }
 .img-thumbnail{
+<<<<<<< HEAD
   width: 120px;
 }
 .card-img-top{
 width: 100px;
+=======
+  width: 150px;
+>>>>>>> 7a6c6dd3a3beaacc1c64c87e1a56bfa57fb58323
 }
