@@ -4,15 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\employee;
 use Illuminate\Http\Request;
+use DataTable;
 
 class employeeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        
+        $employee= employee::all();
+        if($request->ajex){
+            return DataTable :: of();
+
+        }
     }
 
     /**
